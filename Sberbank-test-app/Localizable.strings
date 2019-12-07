@@ -1,0 +1,51 @@
+/* 
+  Localizable.strings
+  Sberbank-test-app
+
+  Created by Геннадий Бочаров on 05/12/2019.
+  Copyright © 2019 Геннадий Бочаров. All rights reserved.
+*/
+
+// MARK: Keyboard
+
+"keyboard.rightButton.done" = "Done";
+"keyboard.rightButton.next" = "Next";
+"keyboard.rightButton.clear" = "Clear";
+
+
+// MARK: UIAlert
+
+"alert.titleText.info" = "Information";
+"alert.titleText.error" = "Error";
+"alert.button.ok" = "Ok";
+"alert.button.yes" = "Yes";
+"alert.button.no" = "No";
+"alert.button.cancel" = "Cancel";
+"alert.button.update" = "Update";
+"alert.button.delete" = "Delete";
+"alert.button.exit" = "Exit";
+"alert.button.camera" = "Camera";
+"alert.button.photoLibrary" = "Photo Library";
+
+"alert.message.noInternetConnection" = "There is no communication with the server. Please check your internet connection.";
+"alert.message.logOut" = "Are you sure you want to exit the profile?";
+
+// MARK: Translate module
+
+"translate.inputText.placeholder" = "Text or website address";
+"translate.selectLanguageButton.choose" = "Сhoose language";
+
+// MARK: History module
+
+"history.title" = "History";
+
+// MARK: LanguageList module
+
+"history.originalLanguageTitle" = "Original Language";
+"history.translateLanguageTitle" = "Translate Language";
+
+// MARK: Settings module
+
+"settings.title" = "Settings";
+
+

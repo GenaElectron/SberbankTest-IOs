@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HistoryCell" customModule="Sberbank_test_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="112"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wpa-fm-V7N">
+                    <rect key="frame" x="16" y="44" width="320" height="52"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbc-TU-3F5" userLabel="Container View">
+                            <rect key="frame" x="0.0" y="0.0" width="152" height="52"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80Z-vs-c63">
+                                    <rect key="frame" x="0.0" y="16" width="152" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="80Z-vs-c63" secondAttribute="bottom" id="JgI-vy-TiD"/>
+                                <constraint firstItem="80Z-vs-c63" firstAttribute="leading" secondItem="Bbc-TU-3F5" secondAttribute="leading" id="aea-nY-VYP"/>
+                                <constraint firstAttribute="trailing" secondItem="80Z-vs-c63" secondAttribute="trailing" id="gep-Q6-d52"/>
+                                <constraint firstItem="80Z-vs-c63" firstAttribute="top" secondItem="Bbc-TU-3F5" secondAttribute="top" constant="16" id="xBW-Zb-i4O"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZJ-c5-U4Y" userLabel="Container View">
+                            <rect key="frame" x="168" y="0.0" width="152" height="52"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqq-It-XpS">
+                                    <rect key="frame" x="0.0" y="16" width="152" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Yqq-It-XpS" secondAttribute="trailing" id="2O5-i8-Hmr"/>
+                                <constraint firstItem="Yqq-It-XpS" firstAttribute="top" secondItem="vZJ-c5-U4Y" secondAttribute="top" constant="16" id="N6r-wS-uHh"/>
+                                <constraint firstItem="Yqq-It-XpS" firstAttribute="leading" secondItem="vZJ-c5-U4Y" secondAttribute="leading" id="WoA-I6-ijw"/>
+                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Yqq-It-XpS" secondAttribute="bottom" id="y8Q-tL-ZAK"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="wpa-fm-V7N" secondAttribute="bottom" constant="16" id="UhM-YX-cnu"/>
+                <constraint firstItem="wpa-fm-V7N" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Vsm-LI-c7C"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wpa-fm-V7N" secondAttribute="trailing" constant="16" id="b3c-pL-4Yh"/>
+                <constraint firstItem="wpa-fm-V7N" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="x97-JJ-K45"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="originalText" destination="80Z-vs-c63" id="gmz-Ha-Ub3"/>
+                <outlet property="translateText" destination="Yqq-It-XpS" id="aV5-Gz-MfO"/>
+            </connections>
+            <point key="canvasLocation" x="-30.434782608695656" y="-234.375"/>
+        </view>
+    </objects>
+</document>

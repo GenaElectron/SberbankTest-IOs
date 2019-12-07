@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="18G1012" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="History" representedClassName="History" syncable="YES">
+        <attribute name="direction" attributeType="String"/>
+        <attribute name="original" attributeType="String"/>
+        <attribute name="translate" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="History" positionX="-2869.21484375" positionY="-2362.65625" width="128" height="88"/>
+    </elements>
+</model>

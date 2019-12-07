@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar View Controller-->
+        <scene sceneID="Akx-Zs-GGU">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarViewController" id="JbA-PG-0q4" customClass="MainTabBarViewController" customModule="Sberbank_test_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Tr-Hk-aBY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zcu-uP-kqZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="743" y="203"/>
+        </scene>
+        <!--Translate View Controller-->
+        <scene sceneID="jeZ-lN-B7j">
+            <objects>
+                <viewController storyboardIdentifier="TranslateViewController" id="RR8-1c-uET" customClass="TranslateViewController" customModule="Sberbank_test_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hbO-98-YI8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0N-ep-zkO" userLabel="HeadContainerView">
+                                <rect key="frame" x="0.0" y="44" width="375" height="54"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEx-K4-gnD">
+                                        <rect key="frame" x="171.66666666666666" y="11" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="cgw-n1-fzM"/>
+                                            <constraint firstAttribute="width" constant="32" id="wyT-ep-K7z"/>
+                                        </constraints>
+                                        <state key="normal" image="arrow"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMw-7B-ovz">
+                                        <rect key="frame" x="219.66666666666666" y="12" width="45.999999999999972" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9e-Xp-PyZ">
+                                        <rect key="frame" x="109.66666666666669" y="12" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="4ah-5A-GWE"/>
+                                    <constraint firstItem="p9e-Xp-PyZ" firstAttribute="centerY" secondItem="O0N-ep-zkO" secondAttribute="centerY" id="K3H-ZD-y2R"/>
+                                    <constraint firstItem="HMw-7B-ovz" firstAttribute="centerY" secondItem="O0N-ep-zkO" secondAttribute="centerY" id="Phe-VF-g8i"/>
+                                    <constraint firstItem="LEx-K4-gnD" firstAttribute="leading" secondItem="p9e-Xp-PyZ" secondAttribute="trailing" constant="16" id="U9t-Zd-UeM"/>
+                                    <constraint firstItem="LEx-K4-gnD" firstAttribute="centerX" secondItem="O0N-ep-zkO" secondAttribute="centerX" id="gxo-LW-G1F"/>
+                                    <constraint firstItem="HMw-7B-ovz" firstAttribute="leading" secondItem="LEx-K4-gnD" secondAttribute="trailing" constant="16" id="oBq-0T-rdk"/>
+                                    <constraint firstItem="LEx-K4-gnD" firstAttribute="centerY" secondItem="O0N-ep-zkO" secondAttribute="centerY" id="sjS-wS-nCe"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82u-lU-dTE" userLabel="BodyContainerView">
+                                <rect key="frame" x="0.0" y="98" width="375" height="680"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnn-x1-V0U">
+                                        <rect key="frame" x="8" y="0.0" width="359" height="672"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySb-Ad-Jwi" userLabel="line">
+                                                <rect key="frame" x="8" y="130" width="343" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.30302868150684931" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="gO9-BH-r3q"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rB6-ZU-gic">
+                                                <rect key="frame" x="0.0" y="131" width="359" height="541"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aiw-qP-UFh">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="130"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="130" id="1nP-Xu-OBG"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="rB6-ZU-gic" firstAttribute="leading" secondItem="mnn-x1-V0U" secondAttribute="leading" id="Blm-hr-cT8"/>
+                                            <constraint firstItem="Aiw-qP-UFh" firstAttribute="leading" secondItem="mnn-x1-V0U" secondAttribute="leading" id="GDo-EI-Zu3"/>
+                                            <constraint firstItem="Aiw-qP-UFh" firstAttribute="top" secondItem="mnn-x1-V0U" secondAttribute="top" id="Hxg-QF-W6M"/>
+                                            <constraint firstAttribute="trailing" secondItem="Aiw-qP-UFh" secondAttribute="trailing" id="JJy-Bf-0RB"/>
+                                            <constraint firstItem="ySb-Ad-Jwi" firstAttribute="leading" secondItem="mnn-x1-V0U" secondAttribute="leading" constant="8" id="YX1-d3-Kuc"/>
+                                            <constraint firstAttribute="bottom" secondItem="rB6-ZU-gic" secondAttribute="bottom" id="Z9Y-TZ-Mgd"/>
+                                            <constraint firstAttribute="trailing" secondItem="rB6-ZU-gic" secondAttribute="trailing" id="hdV-U4-fdN"/>
+                                            <constraint firstItem="rB6-ZU-gic" firstAttribute="top" secondItem="ySb-Ad-Jwi" secondAttribute="bottom" id="tpH-kH-LWB"/>
+                                            <constraint firstAttribute="trailing" secondItem="ySb-Ad-Jwi" secondAttribute="trailing" constant="8" id="utj-8v-XiI"/>
+                                            <constraint firstItem="ySb-Ad-Jwi" firstAttribute="top" secondItem="Aiw-qP-UFh" secondAttribute="bottom" id="v4d-r3-QLp"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="mnn-x1-V0U" firstAttribute="top" secondItem="82u-lU-dTE" secondAttribute="top" id="ac8-ab-qk3"/>
+                                    <constraint firstAttribute="trailing" secondItem="mnn-x1-V0U" secondAttribute="trailing" constant="8" id="ekM-pY-mUj"/>
+                                    <constraint firstItem="mnn-x1-V0U" firstAttribute="leading" secondItem="82u-lU-dTE" secondAttribute="leading" constant="8" id="eri-uK-dYi"/>
+                                    <constraint firstAttribute="bottom" secondItem="mnn-x1-V0U" secondAttribute="bottom" constant="8" id="jgQ-2Y-Bca"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="82u-lU-dTE" firstAttribute="trailing" secondItem="Kb4-M9-ot0" secondAttribute="trailing" id="BaD-TN-SXQ"/>
+                            <constraint firstItem="O0N-ep-zkO" firstAttribute="leading" secondItem="Kb4-M9-ot0" secondAttribute="leading" id="CrM-N1-dsN"/>
+                            <constraint firstItem="82u-lU-dTE" firstAttribute="top" secondItem="O0N-ep-zkO" secondAttribute="bottom" id="Iwd-H3-01u"/>
+                            <constraint firstItem="Kb4-M9-ot0" firstAttribute="bottom" secondItem="82u-lU-dTE" secondAttribute="bottom" id="dWx-0M-ypz"/>
+                            <constraint firstItem="Kb4-M9-ot0" firstAttribute="trailing" secondItem="O0N-ep-zkO" secondAttribute="trailing" id="eh1-3z-Gqm"/>
+                            <constraint firstItem="82u-lU-dTE" firstAttribute="leading" secondItem="Kb4-M9-ot0" secondAttribute="leading" id="fg7-rq-VDn"/>
+                            <constraint firstItem="O0N-ep-zkO" firstAttribute="top" secondItem="Kb4-M9-ot0" secondAttribute="top" id="vIW-1r-pdC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kb4-M9-ot0"/>
+                    </view>
+                    <connections>
+                        <outlet property="backView" destination="mnn-x1-V0U" id="G14-mL-DZS"/>
+                        <outlet property="inputContainerViewText" destination="Aiw-qP-UFh" id="YHj-Ww-jhY"/>
+                        <outlet property="outputContainerViewText" destination="rB6-ZU-gic" id="N0w-h5-YfS"/>
+                        <outlet property="sourceLanguageButton" destination="p9e-Xp-PyZ" id="RAs-8e-UZM"/>
+                        <outlet property="translateLanguageButton" destination="HMw-7B-ovz" id="QiE-Ds-QVz"/>
+                        <outlet property="turnOverLanguageButton" destination="LEx-K4-gnD" id="kfZ-Wi-iUF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oic-nb-6Md" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1655" y="-475"/>
+        </scene>
+        <!--Language List View Controller-->
+        <scene sceneID="6ZE-a0-E3b">
+            <objects>
+                <viewController storyboardIdentifier="LanguageListViewController" id="3kB-OO-4as" customClass="LanguageListViewController" customModule="Sberbank_test_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5zr-Rg-j0c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zeb-GQ-xYz">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zeb-GQ-xYz" firstAttribute="top" secondItem="pzh-ne-ETa" secondAttribute="top" id="8zF-0I-ZLD"/>
+                            <constraint firstItem="pzh-ne-ETa" firstAttribute="bottom" secondItem="Zeb-GQ-xYz" secondAttribute="bottom" id="DOU-5k-3W8"/>
+                            <constraint firstItem="pzh-ne-ETa" firstAttribute="trailing" secondItem="Zeb-GQ-xYz" secondAttribute="trailing" id="Fje-jt-cXv"/>
+                            <constraint firstItem="Zeb-GQ-xYz" firstAttribute="leading" secondItem="pzh-ne-ETa" secondAttribute="leading" id="krK-Mh-t38"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pzh-ne-ETa"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Zeb-GQ-xYz" id="SiE-Du-Gee"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OC1-vM-3fJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2574" y="-475"/>
+        </scene>
+        <!-- -->
+        <scene sceneID="HSU-Gl-sPT">
+            <objects>
+                <viewController storyboardIdentifier="HistoryViewController" automaticallyAdjustsScrollViewInsets="NO" id="wRP-sZ-qWe" customClass="HistoryViewController" customModule="Sberbank_test_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0bJ-IR-zzF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q7d-Hl-t6g">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.76470588240000004" green="0.76078431369999999" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q7d-Hl-t6g" firstAttribute="top" secondItem="kFY-kl-dyZ" secondAttribute="top" id="JlF-1c-5FF"/>
+                            <constraint firstItem="Q7d-Hl-t6g" firstAttribute="leading" secondItem="kFY-kl-dyZ" secondAttribute="leading" id="VBf-IE-NNn"/>
+                            <constraint firstItem="kFY-kl-dyZ" firstAttribute="trailing" secondItem="Q7d-Hl-t6g" secondAttribute="trailing" id="Z1y-zA-0eN"/>
+                            <constraint firstItem="kFY-kl-dyZ" firstAttribute="bottom" secondItem="Q7d-Hl-t6g" secondAttribute="bottom" id="x1p-rd-v5j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kFY-kl-dyZ"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="FF8-OY-3b1">
+                        <string key="title" base64-UTF8="YES">
+CQ
+</string>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="PxX-i7-5Dk">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="removeAll:" destination="wRP-sZ-qWe" id="4Da-09-XlQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Q7d-Hl-t6g" id="me0-Ar-zGc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tng-Yk-lTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653.5999999999999" y="201.72413793103451"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="PLA-jT-SRT">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="OAM-ll-Rss" customClass="SettingsViewController" customModule="Sberbank_test_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lcA-cb-dYB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Rvm-4N-u4i"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RzC-he-aB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="901"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow" width="64" height="64"/>
+    </resources>
+</document>
