@@ -139,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				7A26E8952397E1A700A2C770 /* UserDefaultsStorage.swift */,
-				7A26E8902397E1A700A2C770 /* Language.swift */,
+				7A3E71B5239C00B3004F7AEC /* Entities */,
 			);
 			path = UserDefaultsStorage;
 			sourceTree = "<group>";
@@ -182,9 +182,9 @@
 		7A26E8632397E1A700A2C770 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				7A26E8872397E1A700A2C770 /* TabBarController */,
+				7A26E8872397E1A700A2C770 /* MainTabBar */,
 				7A26E8752397E1A700A2C770 /* Translate */,
-				7A26E86B2397E1A700A2C770 /* WordList */,
+				7A26E86B2397E1A700A2C770 /* History */,
 				7A26E87D2397E1A700A2C770 /* LanguageList */,
 				7A26E8642397E1A700A2C770 /* Settings */,
 			);
@@ -203,7 +203,7 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		7A26E86B2397E1A700A2C770 /* WordList */ = {
+		7A26E86B2397E1A700A2C770 /* History */ = {
 			isa = PBXGroup;
 			children = (
 				7A26E8702397E1A700A2C770 /* Cell */,
@@ -213,7 +213,7 @@
 				7A26E8742397E1A700A2C770 /* HistoryInteractor.swift */,
 				7A26E8722397E1A700A2C770 /* HistoryPresenter.swift */,
 			);
-			path = WordList;
+			path = History;
 			sourceTree = "<group>";
 		};
 		7A26E8702397E1A700A2C770 /* Cell */ = {
@@ -259,7 +259,7 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		7A26E8872397E1A700A2C770 /* TabBarController */ = {
+		7A26E8872397E1A700A2C770 /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
 				7A26E88D2397E1A700A2C770 /* MainTabBarWireframe.swift */,
@@ -268,7 +268,7 @@
 				7A26E88C2397E1A700A2C770 /* MainTabBarInteractor.swift */,
 				7A26E8882397E1A700A2C770 /* MainTabBarPresenter.swift */,
 			);
-			path = TabBarController;
+			path = MainTabBar;
 			sourceTree = "<group>";
 		};
 		7A26E8972397E1A700A2C770 /* BaseVIPER */ = {
@@ -277,6 +277,14 @@
 				7A26E8982397E1A700A2C770 /* BaseVIPER.swift */,
 			);
 			path = BaseVIPER;
+			sourceTree = "<group>";
+		};
+		7A3E71B5239C00B3004F7AEC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7A26E8902397E1A700A2C770 /* Language.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		7A4A8B50239AC05D008B67F5 /* Entities */ = {

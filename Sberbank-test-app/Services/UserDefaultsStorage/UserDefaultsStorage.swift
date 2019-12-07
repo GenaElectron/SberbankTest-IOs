@@ -38,7 +38,7 @@ final class UserDefaultsStorage {
     private init() {
         if isFirstLaunch() {
             setOriginalLanguage(Language(name: "English", key: "en"))
-            setOriginalLanguage(Language(name: "Russian", key: "ru"))
+            setTranslateLanguage(Language(name: "Russian", key: "ru"))
         }
     }
         

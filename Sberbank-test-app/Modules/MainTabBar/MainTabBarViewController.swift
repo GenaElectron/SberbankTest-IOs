@@ -25,7 +25,7 @@ final class MainTabBarViewController: UITabBarController, StoryboardLoadable {
     private func configureView() {
         tabBar.tintColor = UIColor.black
         tabBar.isTranslucent = false
-        tabBar.backgroundColor = .lightGray
+        tabBar.barTintColor = .tabBarBackColor
     }
 }
 

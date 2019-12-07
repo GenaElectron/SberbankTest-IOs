@@ -6,13 +6,6 @@
   Copyright © 2019 Геннадий Бочаров. All rights reserved.
 */
 
-// MARK: Keyboard
-
-"keyboard.rightButton.done" = "Done";
-"keyboard.rightButton.next" = "Next";
-"keyboard.rightButton.clear" = "Clear";
-
-
 // MARK: UIAlert
 
 "alert.titleText.info" = "Information";
@@ -24,11 +17,8 @@
 "alert.button.update" = "Update";
 "alert.button.delete" = "Delete";
 "alert.button.exit" = "Exit";
-"alert.button.camera" = "Camera";
-"alert.button.photoLibrary" = "Photo Library";
 
 "alert.message.noInternetConnection" = "There is no communication with the server. Please check your internet connection.";
-"alert.message.logOut" = "Are you sure you want to exit the profile?";
 
 // MARK: Translate module
 
