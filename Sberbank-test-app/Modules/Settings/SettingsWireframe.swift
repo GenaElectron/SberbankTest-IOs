@@ -9,10 +9,15 @@
 import UIKit
 
 final class SettingsWireframe: BaseWireframe {
+    
+    // MARK: Private properties
+    
+    private let dependency: AppDependency?
 
     // MARK: Module setup
 
-    init() {
+    init(_ dependency: AppDependency? = nil) {
+        self.dependency = dependency
         let moduleViewController = SettingsViewController.instantiate(fromStoryboardNamed: "MainStoryboard")
         super.init(viewController: moduleViewController)
         

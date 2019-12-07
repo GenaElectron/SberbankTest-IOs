@@ -35,6 +35,7 @@ protocol HistoryPresenterInterface: PresenterInterface {
 }
 
 protocol HistotyInteractorInterface: InteractorInterface {
+    var storage: CoreDataStorageInterface? { get set }
     func fetchAllHistory(completion: @escaping VoidClosure)
     func getAllHistory() -> [History]
     func getAllSearchHistory() -> [History]

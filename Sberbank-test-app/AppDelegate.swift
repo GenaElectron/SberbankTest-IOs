@@ -14,13 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-                
+        let dependency = AppDependency(networkService: NetworkService.shared,
+                                       userDefaultsStorage: UserDefaultsStorage.shared,
+                                       coreDataStorage: CoreDataStorage.shared)
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = MainTabBarWireframe().viewController
+        self.window?.rootViewController = MainTabBarWireframe(dependency).viewController
         self.window?.makeKeyAndVisible()
         return true
     }
 }
-

@@ -9,10 +9,15 @@
 import UIKit
 
 final class MainTabBarWireframe: BaseWireframe {
+    
+    // MARK: Private properties
+
+    let dependency: AppDependency?
 
     // MARK: Module setup
-
-    init() {
+    
+    init(_ dependency: AppDependency? = nil) {
+        self.dependency = dependency
         let moduleViewController = MainTabBarViewController.instantiate(fromStoryboardNamed: "MainStoryboard")
         super.init(viewController: moduleViewController)
         
@@ -30,20 +35,20 @@ extension MainTabBarWireframe: MainTabBarWireframeInterface {
         let translateTabBarItem = UITabBarItem()
         translateTabBarItem.image = UIImage(named: "transtate")
         
-        let translateVC = TranslateWireframe().viewController
+        let translateVC = TranslateWireframe(dependency).viewController
         translateVC.tabBarItem = translateTabBarItem
         let worldListDelegate = (translateVC as? TranslateViewController)?.presenter
         
         let wordListTabBarItem = UITabBarItem()
         wordListTabBarItem.image = UIImage(named: "list")
         
-        let wordListVC = HistoryWireframe(delegate: worldListDelegate).viewController
+        let wordListVC = HistoryWireframe(dependency, delegate: worldListDelegate).viewController
         wordListVC.tabBarItem = wordListTabBarItem
         
         let settingsTabBarItem = UITabBarItem()
         settingsTabBarItem.image = UIImage(named: "settings")
         
-        let settingsVC = SettingsWireframe().viewController
+        let settingsVC = SettingsWireframe(dependency).viewController
         settingsVC.tabBarItem = settingsTabBarItem
         
         return [

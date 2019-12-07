@@ -10,11 +10,11 @@ import Foundation
 
 final class TranslateInteractor {
     
-    // MARK: Private properties
-    
-    private let userDefaults = UserDefaultsStorage.shared
-    private let networkService = NetworkService.shared
-    private let storage = CoreDataStorage.shared
+    // MARK: Public properties
+
+    var userDefaults: UserDefaultsStorageInterface?
+    var networkService:  NetworkServiceInterface?
+    var storage: CoreDataStorageInterface?
 }
 
 // MARK: Extensions TranslateInteractorInterface
@@ -22,41 +22,41 @@ final class TranslateInteractor {
 extension TranslateInteractor: TranslateInteractorInterface {    
     func getOriginalLanguage() -> String {
         let text = NSLocalizedString("translate.selectLanguageButton.choose", comment: "")
-        return userDefaults.getOriginalLanguage()?.name ?? text
+        return userDefaults?.getOriginalLanguage()?.name ?? text
     }
     
     func setOriginalLanguage(_ language: Language) {
-        userDefaults.setOriginalLanguage(language)
+        userDefaults?.setOriginalLanguage(language)
     }
     
     func getTranslateLanguage() -> String {
         let text = NSLocalizedString("translate.selectLanguageButton.choose", comment: "")
-        return userDefaults.getTranslateLanguage()?.name ?? text
+        return userDefaults?.getTranslateLanguage()?.name ?? text
     }
     
     func setTranslateLanguage(_ language: Language) {
-        userDefaults.setTranslateLanguage(language)
+        userDefaults?.setTranslateLanguage(language)
     }
         
     func turnOverLanguage() {
-        guard let originalLanguage = userDefaults.getOriginalLanguage(),
-            let translateLanguage = userDefaults.getTranslateLanguage() else { return }
-        userDefaults.setOriginalLanguage(translateLanguage)
-        userDefaults.setTranslateLanguage(originalLanguage)
+        guard let originalLanguage = userDefaults?.getOriginalLanguage(),
+            let translateLanguage = userDefaults?.getTranslateLanguage() else { return }
+        userDefaults?.setOriginalLanguage(translateLanguage)
+        userDefaults?.setTranslateLanguage(originalLanguage)
     }
     
     func getLanguageList() -> [Language] {
-        return networkService.supportedLanguages
+        return networkService?.supportedLanguages ?? []
     }
     
     func translateText(text: String, completion: @escaping ItemClosure<String>, noIternetConnectionHandler: @escaping VoidClosure) {
-        guard let originalLanguageKey = userDefaults.getOriginalLanguage()?.key,
-            let translateLanguageKey = userDefaults.getTranslateLanguage()?.key else { return }
+        guard let originalLanguageKey = userDefaults?.getOriginalLanguage()?.key,
+            let translateLanguageKey = userDefaults?.getTranslateLanguage()?.key else { return }
         let direction = originalLanguageKey + "-" + translateLanguageKey
-        networkService.translate(text: text, lang: direction) {[weak self] text, error in
+        networkService?.translate(text: text, lang: direction) {[weak self] text, error in
             guard let self = self else { return }
             if let translateText = text {
-                self.storage.insert(original: translateText, translate: translateText, direction: direction)
+                self.storage?.insert(original: translateText, translate: translateText, direction: direction)
                 DispatchQueue.main.async { completion(translateText) }
             }
             if let error = error {

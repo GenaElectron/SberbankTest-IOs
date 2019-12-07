@@ -32,5 +32,6 @@ protocol LanguageListPresenterInterface: PresenterInterface {
 }
 
 protocol LanguageListInteractorInterface: InteractorInterface {
+    var networkService: NetworkServiceInterface? { get set }
     func getLanguageList() -> [Language]
 }

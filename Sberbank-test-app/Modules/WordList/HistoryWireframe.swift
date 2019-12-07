@@ -9,14 +9,21 @@
 import UIKit
 
 final class HistoryWireframe: BaseWireframe {
+    
+    // MARK: Private properties
+    
+    private let dependency: AppDependency?
 
     // MARK: Module setup
 
-    init(delegate: HistoryDelegate? = nil) {
+    init(_ dependency: AppDependency? = nil, delegate: HistoryDelegate? = nil) {
+        self.dependency = dependency
         let moduleViewController = HistoryViewController.instantiate(fromStoryboardNamed: "MainStoryboard")
         super.init(viewController: moduleViewController)
         
         let interactor = HistoryInteractor()
+        interactor.storage = dependency?.coreDataStorage
+        
         let presenter = HistoryPresenter(view: moduleViewController, interactor: interactor, wireframe: self)
         moduleViewController.presenter = presenter
         presenter.delegate = delegate

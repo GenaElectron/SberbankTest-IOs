@@ -10,16 +10,16 @@ import Foundation
 
 final class LanguageListInteractor {
     
-    // MARK: Private properties
+    // MARK: Public properties
     
-    private let networkService = NetworkService.shared
+    var networkService: NetworkServiceInterface?
 }
 
 // MARK: Extensions LanguageListInteractorInterface
 
 extension LanguageListInteractor: LanguageListInteractorInterface {
     func getLanguageList() -> [Language] {
-        return networkService.supportedLanguages
+        return networkService?.supportedLanguages ?? []
     }
     
 }

@@ -9,7 +9,12 @@
 import Foundation
 
 final class HistoryInteractor {
-    private let storage = CoreDataStorage.shared
+    
+    // MARK: Public properties
+
+    var storage: CoreDataStorageInterface?
+    
+    // MARK: Private properties
     
     private var historyData: [History] = []
     private var searchHistoryData: [History] = []
@@ -19,7 +24,7 @@ final class HistoryInteractor {
 
 extension HistoryInteractor: HistotyInteractorInterface {
     func removeAll() {
-        storage.deleteAll()
+        storage?.deleteAll()
         historyData.removeAll()
     }
     
@@ -28,7 +33,7 @@ extension HistoryInteractor: HistotyInteractorInterface {
     }
     
     func fetchAllHistory(completion: @escaping VoidClosure) {
-        storage.fetch(objectType: History.self, completion: {[weak self] data in
+        storage?.fetch(objectType: History.self, search: nil, completion: {[weak self] data in
             guard let self = self else { return }
             self.historyData = data ?? []
             completion()
@@ -40,7 +45,7 @@ extension HistoryInteractor: HistotyInteractorInterface {
     }
 
     func getFilterHistory(searchText: String, completion: @escaping VoidClosure) {
-        storage.fetch(objectType: History.self, search: searchText, completion: {[weak self] data in
+        storage?.fetch(objectType: History.self, search: searchText, completion: {[weak self] data in
             guard let self = self else { return }
             self.searchHistoryData = data ?? []
             completion()

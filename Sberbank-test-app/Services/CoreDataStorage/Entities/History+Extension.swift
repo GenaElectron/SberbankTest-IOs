@@ -1,5 +1,5 @@
 //
-//  History+CoreDataProperties.swift
+//  History+Extension.swift
 //  Sberbank-test-app
 //
 //  Created by Геннадий Бочаров on 04/12/2019.

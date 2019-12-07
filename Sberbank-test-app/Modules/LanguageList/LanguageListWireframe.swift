@@ -9,14 +9,21 @@
 import UIKit
 
 final class LanguageListWireframe: BaseWireframe {
+    
+    // MARK: Private properties
+    
+    private let dependency: AppDependency?
 
     // MARK: Module setup
 
-    init(language: String, isOriginal: Bool) {
+    init(_ dependency: AppDependency? = nil, language: String, isOriginal: Bool) {
+        self.dependency = dependency
         let moduleViewController = LanguageListViewController.instantiate(fromStoryboardNamed: "MainStoryboard")
         super.init(viewController: moduleViewController)
         
         let interactor = LanguageListInteractor()
+        interactor.networkService = dependency?.networkService
+        
         let presenter = LanguageListPresenter(view: moduleViewController, interactor: interactor, wireframe: self, language: language, isOriginal: isOriginal)
         moduleViewController.presenter = presenter
     }

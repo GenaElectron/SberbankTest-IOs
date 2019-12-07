@@ -1,5 +1,5 @@
 //
-//  RequestManager.swift
+//  NetworkService.swift
 //  Sberbank-test-app
 //
 //  Created by Геннадий Бочаров on 04/12/2019.
@@ -25,7 +25,7 @@ final class NetworkService {
     
     // MARK: init
     
-    init() {}
+    private init() {}
     
     // MARK: private methods
         

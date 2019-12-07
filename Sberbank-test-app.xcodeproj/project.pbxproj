@@ -43,6 +43,7 @@
 		7A26E8C52397E1A700A2C770 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A26E8942397E1A700A2C770 /* History.swift */; };
 		7A26E8C62397E1A700A2C770 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A26E8952397E1A700A2C770 /* UserDefaultsStorage.swift */; };
 		7A26E8C82397E1A700A2C770 /* BaseVIPER.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A26E8982397E1A700A2C770 /* BaseVIPER.swift */; };
+		7A3E71B4239BFBAA004F7AEC /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E71B3239BFBAA004F7AEC /* AppDependency.swift */; };
 		7A82869F2399338100571A21 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82869E2399338100571A21 /* UIViewController+Extensions.swift */; };
 		7A8286A2239933E500571A21 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8286A1239933E500571A21 /* TypeAliases.swift */; };
 		7A8286A42399343B00571A21 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A8286A32399343B00571A21 /* Localizable.strings */; };
@@ -95,6 +96,7 @@
 		7A26E8942397E1A700A2C770 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		7A26E8952397E1A700A2C770 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
 		7A26E8982397E1A700A2C770 /* BaseVIPER.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVIPER.swift; sourceTree = "<group>"; };
+		7A3E71B3239BFBAA004F7AEC /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
 		7A82869E2399338100571A21 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		7A8286A1239933E500571A21 /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
 		7A8286A32399343B00571A21 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				7A0EAAE8239A93870082DF6A /* Storyboards */,
 				7A0EAAE7239A933B0082DF6A /* CustomViews */,
 				7A830D3A2397E11100D1EB1A /* AppDelegate.swift */,
+				7A3E71B3239BFBAA004F7AEC /* AppDependency.swift */,
 				7A8286A32399343B00571A21 /* Localizable.strings */,
 				7A830D442397E11100D1EB1A /* Assets.xcassets */,
 				7A830D492397E11100D1EB1A /* Info.plist */,
@@ -436,6 +439,7 @@
 				7A26E8B42397E1A700A2C770 /* LanguageListInterfaces.swift in Sources */,
 				7A26E8B02397E1A700A2C770 /* TranslateInteractor.swift in Sources */,
 				7AF0B9D12397EB10005D6660 /* ApplicationDataModel.xcdatamodeld in Sources */,
+				7A3E71B4239BFBAA004F7AEC /* AppDependency.swift in Sources */,
 				7A26E8AA2397E1A700A2C770 /* HistoryViewController.swift in Sources */,
 				7A26E8B12397E1A700A2C770 /* TranslateWireframe.swift in Sources */,
 				7A26E8C82397E1A700A2C770 /* BaseVIPER.swift in Sources */,
