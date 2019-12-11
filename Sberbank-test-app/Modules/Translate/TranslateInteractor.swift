@@ -53,10 +53,10 @@ extension TranslateInteractor: TranslateInteractorInterface {
         guard let originalLanguageKey = userDefaults?.getOriginalLanguage()?.key,
             let translateLanguageKey = userDefaults?.getTranslateLanguage()?.key else { return }
         let direction = originalLanguageKey + "-" + translateLanguageKey
-        networkService?.translate(text: text, lang: direction) {[weak self] text, error in
+        networkService?.translate(text: text, lang: direction) {[weak self] translateText, error in
             guard let self = self else { return }
-            if let translateText = text {
-                self.storage?.insert(original: translateText, translate: translateText, direction: direction)
+            if let translateText = translateText {
+                self.storage?.insert(original: text, translate: translateText, direction: direction)
                 DispatchQueue.main.async { completion(translateText) }
             }
             if let error = error {
