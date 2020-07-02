@@ -33,7 +33,7 @@ extension UITextViewWithHandler: UITextViewDelegate {
                 placeholderLabel.text = newValue
                 placeholderLabel.sizeToFit()
             } else {
-                self.addPlaceholder(newValue!)
+                self.addPlaceholder(newValue)
             }
         }
     }
@@ -61,7 +61,7 @@ extension UITextViewWithHandler: UITextViewDelegate {
         }
     }
     
-    private func addPlaceholder(_ placeholderText: String) {
+    private func addPlaceholder(_ placeholderText: String?) {
         let placeholderLabel = UILabel()
         placeholderLabel.text = placeholderText
         placeholderLabel.sizeToFit()

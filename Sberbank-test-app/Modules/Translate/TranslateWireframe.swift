@@ -41,6 +41,7 @@ extension TranslateWireframe: TranslateWireframeInterface {
         case .openLanguageList(let lang, let isOriginal):
             let languageListWireframe = LanguageListWireframe(dependency, language: lang, isOriginal: isOriginal)
             let navigationController = UINavigationController(rootViewController: languageListWireframe.viewController)
+            navigationController.modalPresentationStyle = .fullScreen
             viewController.present(navigationController, animated: true)
         }
     }
