@@ -141,8 +141,8 @@ extension HistoryViewController: UISearchResultsUpdating {
 
 extension HistoryViewController: UISearchControllerDelegate {
     func didPresentSearchController(_ searchController: UISearchController) {
-        DispatchQueue.main.async { [unowned self] in
-            self.searchController.searchBar.becomeFirstResponder()
+        DispatchQueue.main.async { [weak self] in
+            self?.searchController.searchBar.becomeFirstResponder()
         }
     }
 }

@@ -31,8 +31,8 @@
 
 // MARK: LanguageList module
 
-"history.originalLanguageTitle" = "Original Language";
-"history.translateLanguageTitle" = "Translate Language";
+"languageList.originalLanguageTitle" = "Original Language";
+"languageList.translateLanguageTitle" = "Translate Language";
 
 // MARK: Settings module
 

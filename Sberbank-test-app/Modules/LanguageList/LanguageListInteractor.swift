@@ -13,6 +13,7 @@ final class LanguageListInteractor {
     // MARK: Public properties
     
     var networkService: NetworkServiceInterface?
+    var userDefaults: UserDefaultsStorageInterface?
 }
 
 // MARK: Extensions LanguageListInteractorInterface
@@ -22,5 +23,12 @@ extension LanguageListInteractor: LanguageListInteractorInterface {
         return networkService?.supportedLanguages ?? []
     }
     
+    func setOriginalLanguage(_ language: Language) {
+        userDefaults?.setOriginalLanguage(language)
+    }
+    
+    func setTranslateLanguage(_ language: Language) {
+        userDefaults?.setTranslateLanguage(language)
+    }
 }
 

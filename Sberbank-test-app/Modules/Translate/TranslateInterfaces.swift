@@ -36,9 +36,9 @@ protocol TranslatePresenterInterface: PresenterInterface, HistoryDelegate {
 }
 
 protocol TranslateInteractorInterface: InteractorInterface {
-    var userDefaults: UserDefaultsStorageInterface? { get set }
-    var networkService:  NetworkServiceInterface? { get set }
-    var storage: CoreDataStorageInterface? { get set }
+    var userDefaults: UserDefaultsStorageInterface? { get }
+    var networkService:  NetworkServiceInterface? { get }
+    var storage: CoreDataStorageInterface? { get }
     func getLanguageList() -> [Language]
     func getOriginalLanguage() -> String
     func setOriginalLanguage(_ language: Language)

@@ -23,6 +23,7 @@ final class LanguageListWireframe: BaseWireframe {
         
         let interactor = LanguageListInteractor()
         interactor.networkService = dependency?.networkService
+        interactor.userDefaults = dependency?.userDefaultsStorage
         
         let presenter = LanguageListPresenter(view: moduleViewController, interactor: interactor, wireframe: self, language: language, isOriginal: isOriginal)
         moduleViewController.presenter = presenter

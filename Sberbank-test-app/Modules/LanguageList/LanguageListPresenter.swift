@@ -12,8 +12,6 @@ final class LanguageListPresenter {
 
     // MARK: Private properties
     
-    let userDefaults = UserDefaultsStorage.shared
-
     private unowned let view: LanguageListViewInterface
     private let interactor: LanguageListInteractorInterface
     private let wireframe: LanguageListWireframeInterface
@@ -61,12 +59,13 @@ extension LanguageListPresenter: LanguageListPresenterInterface {
         let language = interactor.getLanguageList()[indexPath.row]
         self.languageName = language.name ?? ""
         if isOriginal {
-            userDefaults.setOriginalLanguage(language)
+            interactor.setOriginalLanguage(language)
         } else {
-            userDefaults.setTranslateLanguage(language)
+            interactor.setTranslateLanguage(language)
         }
         view.reloadTable()
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(150)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(150)) { [weak self] in
+            guard let self = self else { return }
             self.wireframe.navigate(to: .close)
         }
     }

@@ -90,12 +90,19 @@ final class TranslateViewController: UIViewController, StoryboardLoadable {
     
     private func inputTextChange(text: String) {
         searchTimer?.invalidate()
-        searchTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { _ in
+        searchTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { [weak self] _ in
+            guard let self = self else { return }
             if text.isEmpty { self.setTextOutput(text: "") }
             DispatchQueue.global(qos: .userInteractive).async {
                 self.presenter.translateText(text: text)
             }
         })
+    }
+    
+    // MARK: Deinit
+    
+    deinit {
+        searchTimer?.invalidate()
     }
 }
 

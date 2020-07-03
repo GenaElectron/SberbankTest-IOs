@@ -39,9 +39,9 @@ final class LanguageListViewController: UIViewController, StoryboardLoadable {
 extension LanguageListViewController: LanguageListViewInterface {
     func setTitle() {
         if presenter.isOriginalLanguage() {
-            self.title = NSLocalizedString("history.originalLanguageTitle", comment: "")
+            self.title = NSLocalizedString("languageList.originalLanguageTitle", comment: "")
         } else {
-            self.title = NSLocalizedString("history.translateLanguageTitle", comment: "")
+            self.title = NSLocalizedString("languageList.translateLanguageTitle", comment: "")
         }
     }
     
